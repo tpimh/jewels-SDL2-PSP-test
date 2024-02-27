@@ -8,7 +8,7 @@ include(FindPkgConfig)
 pkg_search_module(SDL2 REQUIRED sdl2)
 
 find_package(Freetype REQUIRED)
-find_package(Harfbuzz REQUIRED)
+find_package(harfbuzz REQUIRED)
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${SDL2_INCLUDE_DIRS})
 
