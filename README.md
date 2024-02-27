@@ -1,8 +1,16 @@
 # Jewels SDL texture loading test
 
-This code shows a simple SDL2 example which runs on PSP, VITA and Linux. It uses texture rendering to draw a BMP image. This makes it easier to test if there are any issues with SDL2 for PSP.
+This code shows a simple SDL2+FreeType+HarfBuzz example which runs on PSP, VITA and Linux. It uses texture rendering to draw text using TTF fonts. This makes it easier to test if there are any issues with SDL2, FreeType or HarfBuzz for PSP.
 
 ![screenshot](screenshot.png?raw=true)
+
+## Authors
+
+I mostly copied the code from these repositories:
+
+- [anoek/ex-sdl-cairo-freetype-harfbuzz](https://github.com/anoek/ex-sdl-cairo-freetype-harfbuzz)
+- [lxnt/ex-sdl-freetype-harfbuzz](https://github.com/lxnt/ex-sdl-freetype-harfbuzz)
+- [GerHobbelt/ex-leptonica-freetype-harfbuzz](https://github.com/GerHobbelt/ex-leptonica-freetype-harfbuzz)
 
 ## Building
 
