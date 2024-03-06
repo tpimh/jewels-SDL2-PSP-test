@@ -37,10 +37,10 @@ ELSEIF(VITA)
         VERSION "01.00"
         NAME ${PROJECT_NAME}
         FILE platform/vita/sce_sys sce_sys
-        FILE block.bmp block.bmp
+        FILE video.ogv video.ogv
     )
 ENDIF()
 
 if(NOT DEFINED VITA)
-        file(COPY block.bmp DESTINATION ${CMAKE_BINARY_DIR})
+        file(COPY video.ogv DESTINATION ${CMAKE_BINARY_DIR})
 endif()
