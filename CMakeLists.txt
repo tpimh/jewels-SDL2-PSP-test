@@ -6,11 +6,22 @@ add_executable(${PROJECT_NAME} main.c)
 
 include(FindPkgConfig)
 pkg_search_module(SDL2 REQUIRED sdl2)
+pkg_search_module(SDL2_MIXER REQUIRED SDL2_mixer)
+pkg_search_module(THEORADEC REQUIRED theoradec)
+pkg_search_module(VORBIS REQUIRED vorbis)
 
-target_include_directories(${PROJECT_NAME} PRIVATE ${SDL2_INCLUDE_DIRS})
+target_include_directories(${PROJECT_NAME} PRIVATE
+    ${SDL2_INCLUDE_DIRS}
+    ${SDL2_MIXER_INCLUDE_DIRS}
+    ${THEORADEC_INCLUDE_DIRS}
+    ${VORBIS_INCLUDE_DIRS}
+)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
     ${SDL2_LIBRARIES}
+    ${SDL2_MIXER_LIBRARIES}
+    ${THEORADEC_LIBRARIES}
+    ${VORBIS_LIBRARIES}
 )
 
 IF(PLATFORM_PSP)
