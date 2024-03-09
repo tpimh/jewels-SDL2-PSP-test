@@ -515,6 +515,8 @@ int main(int argc, char *argv[]) {
         SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, surface);
         SDL_RenderCopy(renderer, texture, NULL, NULL);
         SDL_RenderPresent(renderer);
+
+        SDL_Delay(150);
     }
 
     /* Cleanup */
